@@ -48,12 +48,11 @@ public class MainActivity2 extends AppCompatActivity implements Asynchtask {
             JSONObject lugar = lugaresArray.getJSONObject(i);
             String categoria = lugar.optString("categoria", "");
             String nombreLugar = lugar.optString("nombre_lugar", "");
-            String puntuacion = lugar.optString("puntuacion", "");
             String telefono = lugar.optString("telefono", "");
             lugaresStringBuilder.append("Categoría: ").append(categoria).append("\n");
             lugaresStringBuilder.append("Nombre: ").append(nombreLugar).append("\n");
-            lugaresStringBuilder.append("puntuacion: ").append(puntuacion).append("\n");
             lugaresStringBuilder.append("Teléfono: ").append(telefono).append("\n\n");
+            //en la version anterior mostraba puntuacion, corregi eso
         }
         // Muestra el resultado filtrado en el TextView
         txtBancos.setText("Información de lugares:\n" + lugaresStringBuilder.toString());
